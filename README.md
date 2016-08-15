@@ -1,0 +1,2 @@
+# spa
+基于Marionette和requirejs探讨单页式标准开发框架
