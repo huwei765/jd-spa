@@ -2,7 +2,7 @@ define(["app", "apps/contacts/list/list_view"], function(RootApp, View){
   RootApp.module("ContactsApp.List", function(List, RootApp, Backbone, Marionette, $, _){
     List.Controller = {
       listContacts: function(criterion){
-        require(["common/loading"], function(Loading){
+        require(["common/loading","entities/contact"], function(Loading){
             //直接依赖于loading
             Loading.attach(RootApp.regions.main);
 

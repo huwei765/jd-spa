@@ -37,6 +37,6 @@ requirejs.config({
   }
 });
 
-require(["app","routers/router","common/common","apps/header/header_app","apps/contacts/contacts_app","apps/about/about_app","entities/data"], function(RootApp){
+require(["app","routers/router","common/common","apps/header/header_app","apps/contacts/contacts_app","apps/about/about_app"], function(RootApp){
     RootApp.start();
 });

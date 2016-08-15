@@ -87,24 +87,17 @@ define(["app", "apps/config/storage/localstorage"], function(RootApp){
             }
         };
 
-        //RootApp.reqres.setHandler("contact:entities", function(){
-        //    console.log("x3");
-        //    return API.getContactEntities();
-        //});
-        //
-        //RootApp.reqres.setHandler("contact:entity", function(id){
-        //    return API.getContactEntity(id);
-        //});
-        //
-        //RootApp.reqres.setHandler("contact:entity:new", function(id){
-        //    return new Entities.Contact();
-        //});
-        Entities.getContactEntity = function(id){
-            return API.getContactEntity(id);
-        };
-        Entities.getContactEntities = function(){
+        RootApp.reqres.setHandler("contact:entities", function(){
             return API.getContactEntities();
-        };
+        });
+
+        RootApp.reqres.setHandler("contact:entity", function(id){
+            return API.getContactEntity(id);
+        });
+
+        RootApp.reqres.setHandler("contact:entity:new", function(id){
+            return new Entities.Contact();
+        });
     });
 
     return RootApp.Entities;
