@@ -19,7 +19,8 @@ define(["app", "backbone.picky"], function(RootApp){
     var initializeHeaders = function(){
       Entities.headers = new Entities.HeaderCollection([
         { name: "Contacts", url: "contacts", navigationTrigger: "contacts:list" },
-        { name: "About", url: "about", navigationTrigger: "about:show" }
+        { name: "About", url: "about", navigationTrigger: "about:show" },
+        { name: "Addr", url: "addr", navigationTrigger: "addr:list" }
       ]);
     };
 

@@ -22,7 +22,7 @@ define(["app", "localstorage"], function(RootApp){
       var newStorage = new Backbone.LocalStorage(key);
       storageCache[key] = newStorage;
       return newStorage;
-    }
+    };
 
     var StorageMixin = function(entityPrototype){
       var storageKey = findStorageKey(entityPrototype);
@@ -35,7 +35,7 @@ define(["app", "localstorage"], function(RootApp){
         var obj = new OldConstructor(arguments[0], arguments[1]);
         _.extend(obj, new StorageMixin(OldConstructor.prototype));
         return obj;
-      }
+      };
       NewConstructor.prototype = OldConstructor.prototype;
 
       eval(constructorString + " = NewConstructor;");
