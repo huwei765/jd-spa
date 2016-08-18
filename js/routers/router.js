@@ -3,7 +3,8 @@ define(["app","marionette"], function(RootApp,Marionette){
         appRoutes:{
             "contacts(/filter/criterion::criterion)":"listContacts",
             "contacts/:id": "showContact",
-            "contacts/:id/edit": "editContact"
+            "contacts/:id/edit": "editContact",
+            "about": "showAbout"
         }
     });
     //应答通信
@@ -35,6 +36,9 @@ define(["app","marionette"], function(RootApp,Marionette){
         },
         editContact: function(id){
             triggerAction("ContactsApp","Contacts","edit",id);
+        },
+        showAbout: function(){
+            triggerAction("AboutApp","About","show");
         }
     };
     //实例化路由
